@@ -231,15 +231,15 @@
             body[i].drawImage(ctx, iBody);
         }
 
+        // Draw food
+        ctx.strokeStyle = '#f00';
+        food.drawImage(ctx, iFood);
+
         // Draw walls
         //ctx.fillStyle = '#999';
         //for (i = 0, l = wall.length; i < l; i += 1) {
         // wall[i].fill(ctx);
-        //}
-
-        // Draw food
-        ctx.strokeStyle = '#f00';
-        food.drawImage(ctx, iFood);
+        //} 
 
         //Draw ExtraPoint
         ctx.strokeStyle = '#f00';
@@ -371,6 +371,7 @@
             lastPress = null;
         }
     };
+
     // Highscore Scene
     highscoresScene = new Scene();
     highscoresScene.paint = function(ctx) {
@@ -380,6 +381,7 @@
         // Clean canvas
         ctx.fillStyle = '#030';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
+
         // Draw title
         ctx.fillStyle = '#fff';
         ctx.textAlign = 'center';
@@ -398,11 +400,12 @@
     };
     highscoresScene.act = function() {
         // Load next scene
-        
+
         if (lastPress === KEY_ENTER) {
             loadScene(gameScene);
             lastPress = null;
         }
     };
+
     window.addEventListener('load', init, false);
 }(window));
