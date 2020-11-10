@@ -162,6 +162,8 @@
 
         // Create food
         food = new Rectangle(80, 80, 10, 10);
+        
+        // Create ExtraPoint
         extraPoints = new Rectangle(50, 50, 10, 10);
 
         // Create walls
