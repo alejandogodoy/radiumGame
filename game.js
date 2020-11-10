@@ -214,10 +214,15 @@
         body.push(new Rectangle(0, 0, 10, 10));
         food.x = random(canvas.width / 10 - 1) * 10;
         food.y = random(canvas.height / 10 - 1) * 10;
+        extraPoints.x = 500;
+        extraPoints.y = 500;
+        setTimeout(function() {
         extraPoints.x = random(canvas.width / 10 -1) * 10;
         extraPoints.y = random(canvas.height / 10 - 1) * 10;
+    }, (Math.floor(Math.random() *10) + 1) * 1000);
         gameover = false;
-    };
+};
+    
 
     gameScene.paint = function(ctx) {
         var i = 0,
@@ -352,8 +357,12 @@
               // Extra Intersects
             if (body[0].intersects(extraPoints)) {
                 score += 3;
+                extraPoints.x = 500;
+                extraPoints.y = 500;
+                setTimeout(function() {
                 extraPoints.x = random(canvas.width / 10 - 1) * 10;
                 extraPoints.y = random(canvas.height / 10 - 1) * 10;
+                },(Math.floor(Math.random() * 10) + 1) * 1000);
                 aExtraP.play();
             }
 
