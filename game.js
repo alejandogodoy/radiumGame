@@ -184,7 +184,7 @@
     mainScene = new Scene();
     mainScene.paint = function(ctx) {
         // Clean canvas
-        ctx.fillStyle = '#030';
+        ctx.fillStyle = '#000';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         // Draw title
         ctx.fillStyle = '#fff';
@@ -222,7 +222,7 @@
             l = 0;
 
         // Clean canvas
-        ctx.fillStyle = '#030';
+        ctx.fillStyle = '#000';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         // Draw player
@@ -379,7 +379,7 @@
             l = 0;
 
         // Clean canvas
-        ctx.fillStyle = '#030';
+        ctx.fillStyle = '#000';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         // Draw title
