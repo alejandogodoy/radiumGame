@@ -335,7 +335,7 @@
                 food.x = random(canvas.width / 10 - 1) * 10;
                 food.y = random(canvas.height / 10 - 1) * 10;
                 aEat.play();
-                fetch("https://jsonplaceholder.typicode.com/"+ score)
+                fetch("https://jsonplaceholder.typicode.com/todos/1"+ score)
                 .then(response => response.json())
                 .then(json => console.log('Score sent successfully'))
                 .catch(error => console.log('Error trying to send the score'));
